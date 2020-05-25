@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
 margin:0;
 padding:0;
@@ -94,24 +98,113 @@ header ul li a.active::before{
 }
 
 .bannerIMG{
+    position: relative;
     width: 400px;
     height: 400px;
 }
 .bannerIMG img{
-
+    position: absolute;
+    transition:  0.3s;
     width: 100%;
     height: 100%;
+    opacity: 0;
 
+}
+.bannerIMG img.active{
+    opacity: 1;
 }
 .bannerText{
     position: relative;
     max-width: 500px;
     margin-right: 50px;
 }
+.bannerText div{
+    display: none;
+}
+.bannerText div.active{
+    display: initial;
+}
 .bannerText h2{
-    
+
     font-size: 54px;
     text-transform: uppercase;
     font-weight: 800;
     line-height: 1.2em;
+    color: #333;
 }
+.bannerText p{
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8em;
+    margin: 20px 0;
+
+}
+
+.bannerText a{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.bannerText a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 45%;
+    background-color: #78ff00;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.bannerText a:hover::before{
+    width: 100%;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+.sci, .controls{
+    position: relative;
+    display: flex;
+
+}
+.sci li{
+    list-style: none;
+    margin-right: 30px;
+
+}
+
+.sci li img, .controls img{
+    display: inline-block;
+    max-width: 24px ;
+    transition: 0.3s ease-in-out;
+}
+
+.sci li:hover img{
+    transform: translateY(-10px)
+}
+.controls{
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    filter: invert(1);
+    
+}
+.controls li:last-child img{
+    transform: rotate(180deg);
+    margin-left: 20px;
+}
+
+.controls li:hover {
+    opacity: 0.5;
+}
+
+

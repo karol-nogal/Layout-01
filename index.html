@@ -27,8 +27,31 @@
       </header>
       <div class="content">
         <div class="bannerText">
+          <div class="active">
+            <h2>EAT Healthy
+            Stay Healthy</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              autem eum inventore nemo sed, repudiandae dicta quisquam ab
+              facilis sunt ducimus unde ea, neque accusamus, sint enim. Fugit,
+              fuga aperiam.
+            </p>
+            <a href="#">Read More</a>
+          </div>
           <div>
-            <h2>EAT Healthy</h2>
+            <h2>EAT Your
+            Veggies</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              autem eum inventore nemo sed, repudiandae dicta quisquam ab
+              facilis sunt ducimus unde ea, neque accusamus, sint enim. Fugit,
+              fuga aperiam.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div>
+            <h2>Good Food
+            Good Mood</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
               autem eum inventore nemo sed, repudiandae dicta quisquam ab
@@ -38,10 +61,24 @@
             <a href="#">Read More</a>
           </div>
         </div>
-        <div class="bannerIMG">
-          <img src="images/img1.jpeg" />
+        <div class="bannerIMG" id="slideshow">
+          <img src="images/img1.jpeg" class="active"/>
+          <img src="images/img2.jpg" />
+          <img src="images/img3.jpeg" />
         </div>
       </div>
+      <div class="icons">
+          <ul class="sci">
+              <li><a href="#"><img src="./images/facebook-logo.png"></a></li>
+              <li><a href="#"><img src="./images/twitter.png"></a></li>
+              <li><a href="#"><img src="./images/instagram.png"></a></li>
+          </ul>
+          <ul class="controls">
+              <li><a href="#"><img src="./images/return.png" onclick="nextSlide()"></a></li>
+              <li><a href="#"><img src="./images/return.png" onclick="prevSlide()"></a></li>
+          </ul>
+      </div>
     </div>
+    <script src="./scripts.js"></script>
   </body>
 </html>
